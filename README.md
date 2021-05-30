@@ -1,2 +1,2 @@
 # JavaScript-Practice
-# Test
+  Here are some basic practices of course
