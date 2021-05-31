@@ -1,5 +1,6 @@
 # JavaScript-Practice
-  Here are some basic practices of course
+Some basic exercises of the course
+
 * 轮播图 js实现
 > [源码地址](https://github.com/EvenfallDew/JavaScript-Practice/tree/main/%E8%BD%AE%E6%92%AD%E5%9B%BE_js%E5%AE%9E%E7%8E%B0)
 
