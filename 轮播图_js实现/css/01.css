@@ -1,0 +1,77 @@
+@charset "UTF-8";
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.show {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+img {
+    position: absolute;
+    width: 1000px;
+    vertical-align: bottom;
+    opacity: 0;
+    transition: all 1s;
+}
+
+img:first-child {
+    display: block;
+}
+
+.page {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.page a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    color: #fff8dc;
+    background-color: #5f9ea0;
+}
+
+.page a.on {
+    background-color: #a52a2a;
+    cursor: pointer;
+}
+
+.click {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 140px;
+    margin-top: -70px;
+    font-size: 100px;
+    line-height: 140px;
+    color: #fff8dc;
+}
+
+.click-right {
+    float: right;
+}
+
+.click a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.click a:hover {
+    color: #ffffff;
+    background-color: rgba(31, 36, 34, 0.5);
+}
