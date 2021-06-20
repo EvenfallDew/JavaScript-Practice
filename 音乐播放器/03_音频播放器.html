@@ -11,9 +11,21 @@
 
 <body>
     <main>
-        <div class="album">
-            <img id="playBtn" src="images/album_001.jpg" alt="album_pic">
-            <audio id="song" src="music/Lover.mp3"></audio>
+        <!-- 封面图 -->
+        <div class="play-box">
+            <img id="playBtn" class="play-btn" src="images/album_001.jpg" alt="album_pic">
+            <audio id="song" src="music/1.mp3" controls></audio>
+        </div>
+        <!-- 进度条 -->
+        <div id="progressBar" class="progress-bar"></div>
+        <!-- 时长 -->
+        <section class="play-time">
+            <span id="musicCurrent">0:00</span>/<span id="musicDuration">0:00</span>
+        </section>
+        <!-- 切换歌曲 -->
+        <div>
+            <button id="prev" class="change-btn" type="button">上一首</button>
+            <button id="next" class="change-btn" type="button">下一首</button>
         </div>
     </main>
 
