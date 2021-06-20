@@ -1,0 +1,172 @@
+@charset "utf-8";
+html, body, ul, li, p, section {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部 */
+
+header {
+    height: 44px;
+    background-color: #e43130;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.header-menu {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+header a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* 头部-搜索 */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: 30px;
+    margin: 10px;
+    color: #acacac;
+}
+
+.search-box-jd {
+    color: #e43130;
+    font-size: 15px;
+    font-weight: bold;
+    text-indent: 14px;
+}
+
+.search-split {
+    margin: 0 10px;
+    text-indent: -9999999em;
+    border-left: 1px solid #acacac;
+}
+
+.search-box-search {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.search-text {
+    font-size: 12px;
+}
+
+/* 内容 */
+
+main {
+    flex: 1;
+    overflow-y: scroll;
+    background-color: #f7f7f7;
+}
+
+/* 内容-轮播 */
+
+main .swiper {
+    padding: 0 15px;
+    background-color: #e43130;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.swiper-container img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 内容-商品列表 */
+
+main ul {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main li {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 200px;
+    padding: 15px;
+}
+
+main li>div {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+main li>div img {
+    height: 120px;
+}
+
+/* 底部 */
+
+footer {
+    display: flex;
+    height: 68px;
+    background-color: #ffffff;
+    justify-content: space-around;
+    box-shadow: 0 0 10px 0 #cccbcb;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-btn {
+    width: 58px;
+    height: 44px;
+    color: #9d9d9d;
+}
+
+.footer-btn span {
+    font-size: 20px;
+}
+
+.footer-btn p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.footer-btn.on {
+    color: #e43130;
+}
