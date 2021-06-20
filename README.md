@@ -9,4 +9,4 @@ Some basic exercises of the course
 * jd仿例移动端测试
 > [源码地址](https://github.com/EvenfallDew/JavaScript-Practice/tree/main/%E5%95%86%E5%9F%8E%E4%BB%BF%E4%BE%8B)
 
-> [预览地址]https://github.com/EvenfallDew/JavaScript-Practice/%E5%95%86%E5%9F%8E%E4%BB%BF%E4%BE%8B/04_%E4%BA%AC%E4%B8%9C%E4%BB%BF%E4%BE%8B.html)
+> [预览地址](https://github.com/EvenfallDew/JavaScript-Practice/%E5%95%86%E5%9F%8E%E4%BB%BF%E4%BE%8B/04_%E4%BA%AC%E4%B8%9C%E4%BB%BF%E4%BE%8B.html)
