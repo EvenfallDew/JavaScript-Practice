@@ -10,11 +10,12 @@
 </head>
 
 <body>
+    <!-- 音乐播放器  -->
     <main>
         <!-- 封面图 -->
         <div class="play-box">
-            <img id="playBtn" class="play-btn" src="images/album_001.jpg" alt="album_pic">
-            <audio id="song" src="music/1.mp3" controls></audio>
+            <img id="playBtn" class="play-btn play-rotate" src="images/1.jpg" alt="album_pic">
+            <audio id="song" src="music/1.mp3"></audio>
         </div>
         <!-- 进度条 -->
         <div id="progressBar" class="progress-bar"></div>
@@ -23,10 +24,17 @@
             <span id="musicCurrent">0:00</span>/<span id="musicDuration">0:00</span>
         </section>
         <!-- 切换歌曲 -->
-        <div>
+        <section>
             <button id="prev" class="change-btn" type="button">上一首</button>
             <button id="next" class="change-btn" type="button">下一首</button>
-        </div>
+        </section>
+        <!-- 播放列表 -->
+        <section id="playList" class="play-list">
+            <ul>
+                <li class="on">1</li>
+                <li>2</li>
+            </ul>
+        </section>
     </main>
 
     <!-- js -->

@@ -8,6 +8,7 @@ let musicCurrent = document.querySelector("#musicCurrent");
 let main = document.querySelector("main");
 let next = document.querySelector("#next");
 let prev = document.querySelector("#prev");
+let playList = document.querySelectorAll("#playList li")
 
 let isPlay = false;
 let timer = null;
@@ -88,7 +89,14 @@ function change() {
     if (num > 2) {
         num = 1;
     }
+    // 切换歌曲文件和封面
     song.src = "music/" + num + ".mp3";
+    playBtn.src = "images/" + num + ".jpg";
+    // 旋转复位
+    playBtn.classList.remove("play-rotate");
+    // 播放音乐
     toPlay();
     isPlay = true;
+    // 旋转重来
+    playBtn.classList.add("play-rotate");
 }
