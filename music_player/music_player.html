@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03_音频播放器</title>
-    <link rel="stylesheet" href="css/03.css">
+    <title>音频播放器</title>
+    <link rel="stylesheet" href="css/music_player.css">
 </head>
 
 <body>
     <!-- 音乐播放器  -->
     <main>
         <!-- 封面图 -->
-        <div class="play-box">
+        <section class="play-box">
             <img id="playBtn" class="play-btn play-rotate" src="images/1.jpg" alt="album_pic">
             <audio id="song" src="music/1.mp3"></audio>
-        </div>
+        </section>
         <!-- 进度条 -->
-        <div id="progressBar" class="progress-bar"></div>
+        <section id="progressBar" class="progress-bar"></section>
         <!-- 时长 -->
         <section class="play-time">
             <span id="musicCurrent">0:00</span>/<span id="musicDuration">0:00</span>
@@ -38,7 +38,7 @@
     </main>
 
     <!-- js -->
-    <script src="js/03.js"></script>
+    <script src="js/music_player.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 "use strict";
 
+// 获取元素
 let playBtn = document.querySelector("#playBtn");
 let song = document.querySelector("#song");
 let progressBar = document.querySelector("#progressBar");
@@ -10,11 +11,12 @@ let next = document.querySelector("#next");
 let prev = document.querySelector("#prev");
 let playList = document.querySelectorAll("#playList li")
 
+// 全局
 let isPlay = false;
 let timer = null;
 let num = 1;
 
-// 播放暂停
+// 播放与暂停
 playBtn.addEventListener("click", function () {
     if (isPlay == false) {
         toPlay();
@@ -37,7 +39,7 @@ function toPause() {
     clearInterval(timer);
 }
 
-// 进度条
+// 进度条与时长
 function progress() {
     let screenWidth = main.clientWidth;
     song.oncanplay = function () {
@@ -51,14 +53,6 @@ function progress() {
     }, 100);
 }
 
-// 结束时
-song.addEventListener("ended", function () {
-    progressBar.style.width = "100%";
-    clearInterval(timer);
-    num = num + 1;
-    change();
-});
-
 // 时长转换
 function format(time) {
     let seconds = parseInt(time);
@@ -70,6 +64,15 @@ function format(time) {
     let result = minutes + ":" + seconds;
     return result;
 }
+
+// 歌曲结束
+song.addEventListener("ended", function () {
+    progressBar.style.width = "100%";
+    clearInterval(timer);
+    // 结束后下一曲
+    num = num + 1;
+    change();
+});
 
 // 切换歌曲
 prev.addEventListener("click", function () {
@@ -89,7 +92,7 @@ function change() {
     if (num > 2) {
         num = 1;
     }
-    // 切换歌曲文件和封面
+    // 切换歌曲和封面
     song.src = "music/" + num + ".mp3";
     playBtn.src = "images/" + num + ".jpg";
     // 旋转复位
@@ -100,3 +103,5 @@ function change() {
     // 旋转重来
     playBtn.classList.add("play-rotate");
 }
+
+// 获取文件名输出到列表中01_musicName.mp3---split("_")获取第一个元素
