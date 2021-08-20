@@ -1,0 +1,122 @@
+@charset "UTF-8";
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-width: 320px;
+    height: 100%;
+    background-color: #212124;
+}
+
+/* 音乐播放器 */
+
+main {
+    background-color: #212124;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* 音乐播放器-封面 */
+
+.play-box {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+
+.play-btn {
+    width: 100%;
+    height: 100%;
+}
+
+.play-rotate {
+    animation: playMusic 30s linear infinite paused;
+}
+
+.play-box:hover {
+    transform: scale(1.1);
+}
+
+/* 播放封面旋转 */
+
+@keyframes playMusic {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 进度条 */
+
+.progress-bar {
+    margin-top: 20px;
+    width: 0%;
+    height: 5px;
+    background-color: #ec4141;
+}
+
+/* 播放时长 */
+
+.play-time {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* 切换歌曲 */
+
+.change-btn {
+    width: 100px;
+    height: 30px;
+    margin: 20px 20px 0 20px;
+    outline: none;
+    border: none;
+    background-color: #2b2b2e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.change-btn:hover {
+    background-color: #363639;
+}
+
+/* 播放列表 */
+
+.play-list {
+    color: #fff;
+    margin: 20px auto;
+}
+
+.play-list ul {
+    background-color: #2b2b2e;
+}
+
+.play-list li {
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+}
+
+.on {
+    background-color: #363639;
+    color: orangered;
+}

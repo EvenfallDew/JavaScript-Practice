@@ -1,0 +1,27 @@
+@charset "utf-8";
+body, p {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.controls {
+    text-align: center;
+}
+
+.progress {
+    position: absolute;
+    bottom: 60px;
+    left: 0px;
+    width: 0%;
+    height: 5px;
+    background-color: orangered;
+}
