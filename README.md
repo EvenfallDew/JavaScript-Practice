@@ -1,9 +1,9 @@
-# JavaScript-Practice
-js练习实现小功能
+# Some basic exercises of JavaScript
 
-* 01_轮播图
+## js 练习实现小功能
+
+### 01. 轮播图
+
 > [源码地址](https://github.com/EvenfallDew/JavaScript-Practice/tree/main/01_%E8%BD%AE%E6%92%AD%E5%9B%BE)
 
 > [预览地址](https://evenfalldew.github.io/JavaScript-Practice/01_%E8%BD%AE%E6%92%AD%E5%9B%BE/index.html)
-
-
