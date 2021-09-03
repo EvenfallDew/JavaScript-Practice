@@ -7,73 +7,61 @@
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
 .swiper-box {
     overflow: hidden;
 
     position: relative;
 
     margin: 0 auto;
-    width: 1000px;
-    height: 420px;
 }
 
-.swiper-box ul {
+.img-list-box {
     position: relative;
     top: 0;
     left: 0;
-
-    width: 400%;
-
-    background-color: aqua;
 }
 
-.swiper-box ul li {
+.swiper-box,
+.image {
     width: 1000px;
-    height: 420px;
+    height: 400px;
 }
 
-.swiper-box li {
+.image {
     float: left;
 }
 
-.swiper-box img {
-    width: 1000px;
-    height: 420px;
+.image img {
+    width: 100%;
+
+    object-fit: cover;
 }
 
-.swiper-box ol {
+.indicator-box {
     position: absolute;
     bottom: 20px;
-    left: 500px;
+    left: 50%;
 
-    width: 100px;
-    height: 5px;
+    transform: translate( -50%,0);
 }
 
-.swiper-box ol li {
+.indicator {
+    float: left;
+
     margin: 0 3px;
     border: 1px solid #fff;
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
 }
 
-.arrow_l,
-.arrow_r {
+.arrow-left,
+.arrow-right {
     display: none;
 
     position: absolute;
     top: 50%;
 
-    margin-top: -25px;
     width: 30px;
     height: 50px;
 
@@ -82,20 +70,25 @@ a:hover {
 
     color: #fff;
     background: rgba(0, 0, 0, .6);
+
+    transform: translate( 0,-50%);
+
+    cursor: pointer;
+    user-select: none;
 }
 
-.arrow_l {
+.arrow-left {
     left: 0;
 }
 
-.arrow_r {
+.arrow-right {
     right: 0;
 }
 
-ol li {
+.indicator {
     cursor: pointer;
 }
 
-ol .active {
+.indicator-box .active {
     background-color: #fff;
 }
