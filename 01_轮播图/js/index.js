@@ -114,14 +114,14 @@ function changeItems(num = 1) {
 	}
 }
 
-// 翻页 下一张图
-arrowRight.addEventListener("click", () => {
-	changeItems();
-});
-
 // 翻页 上一张图
 arrowLeft.addEventListener("click", () => {
 	changeItems(-1);
+});
+
+// 翻页 下一张图
+arrowRight.addEventListener("click", () => {
+	changeItems();
 });
 
 // 指示器 点击切换图片
