@@ -1,0 +1,55 @@
+.content {
+    position: relative;
+
+    margin: 50px auto;
+    box-sizing: border-box;
+    width: 600px;
+    height: 600px;
+
+    background-color: aqua;
+}
+
+.snake-wrap {
+    position: relative;
+
+    background-color: red;
+}
+
+.start-btn,
+.pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: none;
+
+    font-size: 30px;
+
+    background-color: #ccc;
+
+    outline: none;
+
+    transform: translate(-50%,-50%);
+
+    cursor: pointer;
+}
+
+.pause-btn {
+    display: none;
+}
+
+.snakeHead {
+    background-image: url("../images/snake.png");
+    background-size: cover;
+}
+
+.snakeBody {
+    border-radius: 50%;
+
+    background-color: #9ccc65;
+}
+
+.food {
+    background: url("../images/food2.png") no-repeat;
+    background-size: 100% 100%;
+}
