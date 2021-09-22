@@ -10,49 +10,54 @@
 </head>
 
 <body>
-    <!-- 标题 -->
-    <h1>表格行增删</h1>
-    <!-- 表格 -->
-    <table></table>
-    <!-- 添加按钮 -->
-    <div>
-        <button class="add-btn" type="button">添加信息</button>
-    </div>
+    <!-- 预设 -->
+    <main>
+        <!-- 标题 -->
+        <h1>表格行增删</h1>
+        <!-- 表格 -->
+        <table>
+            <thead id="title"></thead>
+            <tbody id="content"></tbody>
+        </table>
+        <!-- 添加按钮 -->
+        <p>
+            <button id="addBtn" class="add-btn" type="button">添加信息</button>
+        </p>
+    </main>
     <!-- 弹窗 -->
-    <div class="add-box">
+    <div id="addBox" class="add-box">
         <!-- 弹窗-添加内容区 -->
-        <div class="add-cont">
+        <form id="addCont" class="add-cont">
             <!-- 弹窗-添加内容区-标题 -->
             <h3>
                 添加信息
-                <button class="close-btn" type="button">X</button>
+                <button id="closeBtn" class="close-btn" type="button">X</button>
             </h3>
             <!-- 弹窗-添加内容区-内容 -->
             <p>
                 学号：
-                <input class="num" type="text">
+                <input class="inp" type="text" required>
+                <span class="inp-info"></span>
             </p>
             <p>
                 姓名：
-                <input class="name" type="text">
-            </p>
-            <p>
-                性别：
-                <input class="age" type="number">
+                <input class="inp" type="text">
+                <span class="inp-info"></span>
             </p>
             <p>
                 年龄：
-                <input class="age" type="number">
+                <input class="inp" type="number" min="1">
+                <span class="inp-info"></span>
             </p>
             <p>
                 介绍：
-                <textarea></textarea>
+                <textarea class="inp"></textarea>
             </p>
             <!-- 提交按钮 -->
             <p>
-                <button class="submit-btn" type="button">提交</button>
+                <button id="submitBtn" class="submit-btn" type="button">提交</button>
             </p>
-        </div>
+        </form>
     </div>
     <!-- js -->
     <script src="js/index.js"></script>
