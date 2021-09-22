@@ -1,12 +1,11 @@
 "use strict";
 
 // 预设数据
-const titleList = ["学号", "姓名", "年龄", "介绍", "操作"];
 const dataList = [
 	{
 		num: 1,
 		name: "黄滑",
-		age: 30,
+		age: 10,
 		intro: "嘤嘤嘤",
 	},
 	{
@@ -18,24 +17,17 @@ const dataList = [
 ];
 
 // 获取元素
-let title = document.querySelector("#title");
 let content = document.querySelector("#content");
 let addBox = document.querySelector("#addBox");
 let addCont = document.querySelector("#addCont");
 let deleteBtn = document.querySelector("#deleteBtn");
-
-let titleHTML = "";
+let inps = document.querySelectorAll(".inp");
 let dataHTML = "";
 let deleteHTML = '<button id="deleteBtn" class="delete-btn" type="button">删除</button>';
-let isConfirm = false;
+let confirmNum = 0;
 
 // 渲染预设
 const dataShow = () => {
-	titleList.forEach((v) => {
-		titleHTML += `
-            <th>${v}</th>
-        `;
-	});
 	dataList.forEach((v) => {
 		dataHTML += `
             <tr>
@@ -47,7 +39,6 @@ const dataShow = () => {
             </tr>
         `;
 	});
-	title.innerHTML = titleHTML;
 	content.innerHTML = dataHTML;
 };
 dataShow();
@@ -66,9 +57,15 @@ document.querySelector("#closeBtn").addEventListener("click", () => {
 
 // 提交内容
 document.querySelector("#submitBtn").addEventListener("click", () => {
-	addBox.style.display = "none";
-	// 获取内容并执行添加
-	addTr(content, getContent());
+	// 获取内容并判断
+	getContent();
+	// 如果通过验证
+	if (confirmNum == inps.length) {
+		addBox.style.display = "none";
+		// 执行添加
+		addTr(content, getContent());
+	}
+	confirmNum = 0;
 });
 
 // 删除内容
@@ -82,12 +79,13 @@ content.addEventListener("click", (e) => {
 
 // 获取内容
 const getContent = () => {
-	let inpArr = [];
+	let inpArr = [deleteHTML];
 	// 获取输入的内容
-	document.querySelectorAll(".inp").forEach((v) => {
-		inpArr.push(v.value);
+	inps.forEach((v, i) => {
+		checkInp(v.value.trim(), i);
+		// 添加进数组
+		inpArr.splice(-1, 0, v.value);
 	});
-	inpArr.push(deleteHTML);
 	return inpArr;
 };
 
@@ -107,4 +105,15 @@ const addTr = (targetElement, inputArray) => {
 	});
 	// 目标元素里添加tr
 	targetElement.appendChild(tr);
+};
+
+// 简单非空验证
+const checkInp = (val, i) => {
+	if (val != "") {
+		document.querySelectorAll(".inp-info")[i].style.display = "none";
+		confirmNum = confirmNum + 1;
+	} else {
+		// 若为空显示提示信息
+		document.querySelectorAll(".inp-info")[i].style.display = "block";
+	}
 };

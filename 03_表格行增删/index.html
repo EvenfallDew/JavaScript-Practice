@@ -16,7 +16,15 @@
         <h1>表格行增删</h1>
         <!-- 表格 -->
         <table>
-            <thead id="title"></thead>
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>介绍</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
             <tbody id="content"></tbody>
         </table>
         <!-- 添加按钮 -->
@@ -37,21 +45,22 @@
             <p>
                 学号：
                 <input class="inp" type="text" required>
-                <span class="inp-info"></span>
+                <span class="inp-info">不能为空</span>
             </p>
             <p>
                 姓名：
                 <input class="inp" type="text">
-                <span class="inp-info"></span>
+                <span class="inp-info">不能为空</span>
             </p>
             <p>
                 年龄：
                 <input class="inp" type="number" min="1">
-                <span class="inp-info"></span>
+                <span class="inp-info">不能为空</span>
             </p>
             <p>
                 介绍：
                 <textarea class="inp"></textarea>
+                <span class="inp-info">不能为空</span>
             </p>
             <!-- 提交按钮 -->
             <p>

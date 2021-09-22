@@ -32,22 +32,23 @@ td {
     height: 40px;
 }
 
-.add-btn {
-    width: 100px;
-    height: 30px;
-
-    cursor: pointer;
-}
-
-.delete-btn {
+button {
     border: none;
-    padding: 5px;
-
-    background-color: #d48383;
 
     outline: none;
 
     cursor: pointer;
+}
+
+.add-btn {
+    width: 100px;
+    height: 30px;
+}
+
+.delete-btn {
+    padding: 5px;
+
+    background-color: #da5151;
 }
 
 .delete-btn:hover {
@@ -97,15 +98,10 @@ h3 {
 .close-btn {
     float: right;
 
-    border: none;
     width: 30px;
     height: 100%;
 
     background-color: #da5151;
-
-    outline: none;
-
-    cursor: pointer;
 }
 
 .close-btn:hover {
@@ -140,17 +136,12 @@ h3 {
 /* 弹窗-添加内容区-提交按钮 */
 
 .submit-btn {
-    border: none;
     border-radius: 20px;
     width: 200px;
     height: 40px;
 
     color: #fff;
     background-color: #0a0;
-
-    outline: none;
-
-    cursor: pointer;
 }
 
 .submit-btn:hover {
@@ -160,7 +151,7 @@ h3 {
 
 /* 提示信息 */
 .inp-info {
-    display: block;
+    display: none;
 
     font-size: 12px;
     text-align: right;
