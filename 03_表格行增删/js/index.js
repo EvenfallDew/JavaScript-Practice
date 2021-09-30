@@ -20,7 +20,6 @@ const dataList = [
 let content = document.querySelector("#content");
 let addBox = document.querySelector("#addBox");
 let addCont = document.querySelector("#addCont");
-let deleteBtn = document.querySelector("#deleteBtn");
 let inps = document.querySelectorAll(".inp");
 let dataHTML = "";
 let deleteHTML = '<button id="deleteBtn" class="delete-btn" type="button">删除</button>';
@@ -117,3 +116,5 @@ const checkInp = (val, i) => {
 		document.querySelectorAll(".inp-info")[i].style.display = "block";
 	}
 };
+
+// 复杂验证 晚上再写
